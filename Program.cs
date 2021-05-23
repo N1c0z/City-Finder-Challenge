@@ -121,10 +121,10 @@ namespace City_Finder_Challenge
                                 }
                                 Console.WriteLine("\n");
                             }
+                            continue;
                         }
                         Console.WriteLine("{0}: {1}", name, value);
                     }
-                    Console.WriteLine("\n");
                 }
                 else
                 {

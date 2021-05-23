@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CityHttpRequestHandler\CityHttpRequestHandler.fsproj" />
+    <ProjectReference Include="CityHttpRequestHandler\CityHttpRequestHandler.fsproj" />
   </ItemGroup>
 
 </Project>
