@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Text.Json;
 using System.ComponentModel;
+using CityHttpRequestHandler;
+
 namespace City_Finder_Challenge
 {
     class Program
@@ -81,14 +83,7 @@ namespace City_Finder_Challenge
                 //this is where we make http request
                 try
                 {
-                    string requestUri = $"http://api.zippopotam.us/{inputArr[0].ToLower()}/{inputArr[1]}";
-
-                    HttpResponseMessage response = await client.GetAsync(requestUri);
-                    //this helps to throw exception
-                    response.EnsureSuccessStatusCode();
-                    //response from server
-                    string responseBody = await response.Content.ReadAsStringAsync();
-                    //Deserialize it
+                    var responseBody = HttpHandlerThingy.GetReponse(inputArr[1], inputArr[0].ToLower());
                     currentCity = JsonSerializer.Deserialize<City>(responseBody,
                     new JsonSerializerOptions
                     {
