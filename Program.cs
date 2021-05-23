@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Text.Json;
 using System.ComponentModel;
-
 namespace City_Finder_Challenge
 {
     class Program
@@ -68,6 +67,15 @@ namespace City_Finder_Challenge
                 if (inputArr[0].Length > 2)
                 {
                     Console.WriteLine("Value inserted not recognized, try again\n");
+                    continue;
+                }
+                try
+                {
+                    RegionInfo regionInfo = new RegionInfo(inputArr[0]);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Inserted country does not exist, please try again");
                     continue;
                 }
                 //this is where we make http request
