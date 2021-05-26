@@ -13,7 +13,7 @@ namespace City_Finder_Challenge
 {
     class Program
     {
-        static readonly HttpClient client = new HttpClient();
+        //static readonly HttpClient client = new HttpClient();
         static async Task Main(string[] args)
         {
             City currentCity;
