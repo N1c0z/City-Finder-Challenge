@@ -60,12 +60,6 @@ namespace City_Finder_Challenge
                     inputArr[i] += letter;
                 }
                 //more answer validation
-                if (!int.TryParse(inputArr[1], out _))
-                {
-                    Console.WriteLine("Value inserted not recognized, try again\n");
-                    continue;
-                }
-                //more answer validation
                 if (inputArr[0].Length > 2)
                 {
                     Console.WriteLine("Value inserted not recognized, try again\n");
